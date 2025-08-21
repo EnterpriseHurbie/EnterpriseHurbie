@@ -11,11 +11,12 @@
     section { padding: 40px 20px; text-align: center; }
     .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
     .service { background: white; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    form { background: white; padding: 20px; max-width: 500px; margin: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    input, textarea, select, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    button { background: #003366; color: white; font-weight: bold; cursor: pointer; border: none; }
+    form { background: white; padding: 20px; max-width: 500px; margin: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: left; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, textarea, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
+    button { background: #003366; color: white; font-weight: bold; cursor: pointer; border: none; margin-top: 15px; }
     button:hover { background: #0055aa; }
-    footer { background: #003366; color: white; text-align: center; padding: 10px; }
+    footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 30px; }
   </style>
 </head>
 <body>
@@ -42,20 +43,44 @@
 
 <section>
   <h2>Get a Free Quote / Book Now</h2>
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone Number" required>
-    <select name="service" required>
-      <option value="">Select a Service</option>
-      <option>Moving & Deliveries</option>
-      <option>Residential Cleaning</option>
-      <option>Furniture Assembly</option>
-      <option>Gutter Cleaning</option>
-    </select>
-    <input type="date" name="date" required>
-    <textarea name="message" placeholder="Additional details..." rows="4"></textarea>
-    <button type="submit">Send Request</button>
+  <form action="https://formspree.io/f/xnnzeaoe" method="POST">
+    <label>
+      Full Name:
+      <input type="text" name="name" required>
+    </label>
+    
+    <label>
+      Email Address:
+      <input type="email" name="email" required>
+    </label>
+    
+    <label>
+      Phone Number:
+      <input type="tel" name="phone" required>
+    </label>
+    
+    <label>
+      Select Service:
+      <select name="service" required>
+        <option value="">-- Choose a Service --</option>
+        <option>Moving & Deliveries</option>
+        <option>Residential Cleaning</option>
+        <option>Furniture Assembly</option>
+        <option>Gutter Cleaning</option>
+      </select>
+    </label>
+    
+    <label>
+      Preferred Date:
+      <input type="date" name="date" required>
+    </label>
+    
+    <label>
+      Additional Details:
+      <textarea name="message" rows="4" placeholder="Tell us more about your request..."></textarea>
+    </label>
+    
+    <button type="submit">Get My Quote</button>
   </form>
 </section>
 
@@ -66,3 +91,5 @@
 
 </body>
 </html>
+
+

@@ -5,18 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hurbie Enterprise</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f7f7f7; color: #333; }
-    header { background: #003366; color: white; padding: 20px; text-align: center; }
-    header h1 { margin: 0; }
-    section { padding: 40px 20px; text-align: center; }
-    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-    .service { background: white; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    form { background: white; padding: 20px; max-width: 500px; margin: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: left; }
-    label { display: block; margin-top: 15px; font-weight: bold; }
-    input, textarea, select, button { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 14px; }
-    button { background: #003366; color: white; font-weight: bold; cursor: pointer; border: none; margin-top: 15px; }
-    button:hover { background: #0055aa; }
-    footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 30px; }
+    /* General reset & font */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "Segoe UI", Tahoma, sans-serif; background: #f5f8fa; color: #333; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #003366, #0055aa);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    /* Section titles */
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+    section { padding: 60px 20px; text-align: center; }
+
+    /* Services */
+    .services { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .service {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+    .service h3 { color: #0055aa; margin-bottom: 10px; }
+
+    /* Form */
+    form {
+      background: white;
+      padding: 30px;
+      max-width: 550px;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    label { font-weight: 600; display: block; margin: 15px 0 5px; }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #0055aa;
+      outline: none;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #0055aa;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #003366; }
+
+    /* Footer */
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p { margin: 5px 0; font-size: 14px; }
   </style>
 </head>
 <body>
@@ -44,53 +122,39 @@
 <section>
   <h2>Get a Free Quote / Book Now</h2>
   <form action="https://formspree.io/f/xnnzeaoe" method="POST">
-    <label>
-      Full Name:
-      <input type="text" name="name" required>
-    </label>
+    <label>Full Name:</label>
+    <input type="text" name="name" required>
     
-    <label>
-      Email Address:
-      <input type="email" name="email" required>
-    </label>
+    <label>Email Address:</label>
+    <input type="email" name="email" required>
     
-    <label>
-      Phone Number:
-      <input type="tel" name="phone" required>
-    </label>
+    <label>Phone Number:</label>
+    <input type="tel" name="phone" required>
     
-    <label>
-      Select Service:
-      <select name="service" required>
-        <option value="">-- Choose a Service --</option>
-        <option>Moving & Deliveries</option>
-        <option>Residential Cleaning</option>
-        <option>Furniture Assembly</option>
-        <option>Gutter Cleaning</option>
-      </select>
-    </label>
+    <label>Select Service:</label>
+    <select name="service" required>
+      <option value="">-- Choose a Service --</option>
+      <option>Moving & Deliveries</option>
+      <option>Residential Cleaning</option>
+      <option>Furniture Assembly</option>
+      <option>Gutter Cleaning</option>
+    </select>
     
-    <label>
-      Preferred Date:
-      <input type="date" name="date" required>
-    </label>
+    <label>Preferred Date:</label>
+    <input type="date" name="date" required>
     
-    <label>
-      Additional Details:
-      <textarea name="message" rows="4" placeholder="Tell us more about your request..."></textarea>
-    </label>
+    <label>Additional Details:</label>
+    <textarea name="message" rows="4" placeholder="Tell us more about your request..."></textarea>
     
     <button type="submit">Get My Quote</button>
   </form>
 </section>
 
 <footer>
-  <p>📞 819-639-1476 | ✉️ enterprisehurbie@gmail.com</p>
+  <p>📞 819-639-1476 | ✉️ gatineau.cleaning.quotes@gmail.com</p>
   <p>&copy; 2025 Hurbie Enterprise</p>
 </footer>
 
 </body>
 </html>
-
-
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hurbie Enterprise</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f7f7f7; color: #333; }
+    header { background: #003366; color: white; padding: 20px; text-align: center; }
+    header h1 { margin: 0; }
+    section { padding: 40px 20px; text-align: center; }
+    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .service { background: white; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    form { background: white; padding: 20px; max-width: 500px; margin: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    input, textarea, select, button { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { background: #003366; color: white; font-weight: bold; cursor: pointer; border: none; }
+    button:hover { background: #0055aa; }
+    footer { background: #003366; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hurbie Enterprise</h1>
+  <p>Moving • Cleaning • Assembly • Gutter Cleaning</p>
+</header>
+
+<section>
+  <h2>About Us</h2>
+  <p>Your trusted partner for moving, deliveries, residential cleaning, furniture assembly, and gutter cleaning. Reliable, affordable, and done right!</p>
+</section>
+
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service"><h3>🚚 Moving & Deliveries</h3><p>Safe and reliable moving services.</p></div>
+    <div class="service"><h3>🧹 Residential Cleaning</h3><p>Keeping your home spotless.</p></div>
+    <div class="service"><h3>🛠 Furniture Assembly</h3><p>Fast and precise furniture setup.</p></div>
+    <div class="service"><h3>🏠 Gutter Cleaning</h3><p>Clean gutters for peace of mind.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Get a Free Quote / Book Now</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number" required>
+    <select name="service" required>
+      <option value="">Select a Service</option>
+      <option>Moving & Deliveries</option>
+      <option>Residential Cleaning</option>
+      <option>Furniture Assembly</option>
+      <option>Gutter Cleaning</option>
+    </select>
+    <input type="date" name="date" required>
+    <textarea name="message" placeholder="Additional details..." rows="4"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+
+<footer>
+  <p>📞 819-639-1476 | ✉️ gatineau.cleaning.quotes@gmail.com</p>
+  <p>&copy; 2025 Hurbie Enterprise</p>
+</footer>
+
+</body>
+</html>
